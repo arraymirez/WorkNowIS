@@ -18,12 +18,12 @@ public class AddUserActivity extends AppCompatActivity {
 
         Button Next= (Button)findViewById(R.id.btnSiguiente);
 
-                Next.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent NextForm= new Intent(AddUserActivity.this,AddUserActivity2.class);
-                        startActivity(NextForm);
-                    }
-                });
+        Next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent NextForm= new Intent(AddUserActivity.this,AddUserActivity2.class);
+                startActivity(NextForm);
+            }
+        });
     }
 }
