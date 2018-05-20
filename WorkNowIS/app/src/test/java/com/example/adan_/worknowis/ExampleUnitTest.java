@@ -1,4 +1,4 @@
-package com.example.adan_.worknowis;
+package package com.sprinklet.worknowis;;
 
 import org.junit.Test;
 

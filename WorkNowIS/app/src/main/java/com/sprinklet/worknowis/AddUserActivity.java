@@ -1,4 +1,4 @@
-package com.example.adan_.worknowis;
+package com.sprinklet.worknowis;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -18,12 +18,12 @@ public class AddUserActivity extends AppCompatActivity {
 
         Button Next= (Button)findViewById(R.id.btnSiguiente);
 
-                Next.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent NextForm= new Intent(AddUserActivity.this,AddUserActivity2.class);
-                        startActivity(NextForm);
-                    }
-                });
+        Next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent NextForm= new Intent(AddUserActivity.this,AddUserActivity2.class);
+                startActivity(NextForm);
+            }
+        });
     }
 }
