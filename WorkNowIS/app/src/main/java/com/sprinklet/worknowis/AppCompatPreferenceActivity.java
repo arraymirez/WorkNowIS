@@ -1,4 +1,4 @@
-package com.example.adan_.worknowis;
+package com.sprinklet.worknowis;
 
 import android.content.res.Configuration;
 import android.os.Bundle;

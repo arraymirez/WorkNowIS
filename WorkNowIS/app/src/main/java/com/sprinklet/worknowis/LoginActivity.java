@@ -1,4 +1,5 @@
-package com.example.adan_.worknowis;
+package com.sprinklet.worknowis;
+
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -47,25 +48,6 @@ public class LoginActivity extends AppCompatActivity  {
              }
 
          });
-
-
-         //boton para crear nuevo usuario
-         NewUser.setOnClickListener(new View.OnClickListener()
-         {
-             @Override
-             public void onClick(View view)
-             {
-
-                 Intent CrearUserForm= new Intent(LoginActivity.this,AddUserActivity.class);
-                 startActivity(CrearUserForm);
-             }
-
-         });
-
     }
-
-
-
-
 }
 

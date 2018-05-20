@@ -1,4 +1,4 @@
-package com.example.adan_.worknowis;
+package com.sprinklet.worknowis;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
