@@ -3,10 +3,7 @@ package com.sprinklet.worknowis;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Toast;
 import android.content.Intent;
 
 public class AddUserActivity extends AppCompatActivity {

@@ -22,7 +22,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".LoginActivity"
+            android:name="com.sprinklet.worknowis.LoginActivity"
             android:label="WorkNow">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -43,16 +43,16 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".MapsActivity"
+            android:name="com.sprinklet.worknowis.MapsActivity"
             android:label="@string/title_activity_maps" />
-        <activity android:name=".AddUserActivity" />
+        <activity android:name="com.sprinklet.worknowis.AddUserActivity" />
         <activity
-            android:name=".NavegationActivity"
+            android:name="com.sprinklet.worknowis.NavegationActivity"
             android:label="@string/title_activity_navegation"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".AddUserActivity2" />
+        <activity android:name="com.sprinklet.worknowis.AddUserActivity2" />
         <activity
-            android:name=".CitasActivity"
+            android:name="com.sprinklet.worknowis.CitasActivity"
             android:label="@string/title_activity_citas"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>

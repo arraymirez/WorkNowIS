@@ -7,6 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
+import com.sprinklet.worknowis.R;
+
 public class CitasActivity extends AppCompatActivity {
 
     @Override
