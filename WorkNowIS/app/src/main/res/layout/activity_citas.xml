@@ -21,8 +21,6 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_citas" />
-
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"
@@ -30,5 +28,24 @@
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
         app:srcCompat="@android:drawable/ic_dialog_email" />
+    <EditText
+        android:id="@+id/txtNombreActividad"
+        android:layout_width="295dp"
+        android:layout_height="70dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Nombre"
+        android:textAlignment="center"
+        android:textColor="@color/white" />
 
+    <EditText
+        android:id="@+id/txtCosto"
+        android:layout_width="293dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Costo"
+        android:textAlignment="center"
+        android:textColor="@color/white" />
 </android.support.design.widget.CoordinatorLayout>
