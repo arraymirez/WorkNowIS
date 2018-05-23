@@ -1,16 +1,15 @@
-package com.sprinklet.worknowis;
+package app.num.http;
 
-import android.content.Intent;
+import android.app.Dialog;
+import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.Toast;
 
-import org.json.JSONException;
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
@@ -21,94 +20,37 @@ import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
+import java.sql.Timestamp;
 import java.util.Iterator;
+import java.util.UUID;
 
 import javax.net.ssl.HttpsURLConnection;
 
+public class MainActivity extends AppCompatActivity {
+    private ProgressDialog progress;
 
-public class LoginActivity extends AppCompatActivity  {
-    private Button LogIn,NewUser;
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
-         super.onCreate(savedInstanceState);
-         setContentView(R.layout.activity_login);
-
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        new SendRequest().execute();
     }
 
-    public void createUser(View view){
-        Intent add = new Intent(LoginActivity.this, AddUserActivity.class);
-        startActivity(add);
-    }
-
-    public void check_login(View view) {
-        String user = ((EditText)findViewById(R.id.txtUsuario)).getText().toString();
-        String pass = ((EditText)findViewById(R.id.txtContraseña)).getText().toString();
-        JSONObject postDataParams = new JSONObject();
-        try {
-            postDataParams.put("user", user);
-            postDataParams.put("pass", pass);
-            SendRequest dt = new SendRequest("http://weareonevision.org/rqst/check_user.php",postDataParams);
-            dt.execute();
-            ((EditText)findViewById(R.id.txtUsuario)).setText(dt._result);
-        }
-        catch (JSONException e) {
-            e.printStackTrace();
-        }
-
-
-        /*
-        URL url;
-        HttpURLConnection con;
-        try {
-            url = new URL("http://weareonevision.org/this.php");
-            con = null;
-            // Construir los datos a enviar
-            String data = "id=45&name=uan";
-
-            con = (HttpURLConnection)url.openConnection();
-
-            // Activar método POST
-            con.setDoOutput(true);
-
-            // Tamaño previamente conocido
-            con.setFixedLengthStreamingMode(data.getBytes().length);
-
-            // Establecer application/x-www-form-urlencoded debido a la simplicidad de los datos
-            con.setRequestProperty("Content-Type","application/x-www-form-urlencoded");
-            Log.e("",con.getResponseMessage());
-            OutputStream out = new BufferedOutputStream(con.getOutputStream());
-
-            out.write(data.getBytes());
-            out.flush();
-            out.close();
-            con.disconnect();
-
-        }
-        catch (IOException e) {
-            e.printStackTrace();
-        }
-        finally {        }
-
-        Intent add = new Intent(LoginActivity.this,MapsActivity.class);
-        startActivity(add);*/;
-    }
     public class SendRequest extends AsyncTask<String, Void, String> {
-        String _url;
-        String _result;
-        JSONObject  postDataParams;
 
-        public SendRequest(String j, JSONObject m)
-        {
-            _url = j;
-            postDataParams = m;
-        }
+        protected void onPreExecute(){}
 
         protected String doInBackground(String... arg0) {
 
             try{
 
-                URL url = new URL(_url);
+                URL url = new URL("http://studytutorial.in/post.php");
+
+                JSONObject postDataParams = new JSONObject();
+
+
+                postDataParams.put("name", "abhay");
+                postDataParams.put("email", "abhay@gmail.com");
 
                 Log.e("params",postDataParams.toString());
 
@@ -159,8 +101,6 @@ public class LoginActivity extends AppCompatActivity  {
         protected void onPostExecute(String result) {
             Toast.makeText(getApplicationContext(), result,
                     Toast.LENGTH_LONG).show();
-            _result = result;
-
 
         }
     }

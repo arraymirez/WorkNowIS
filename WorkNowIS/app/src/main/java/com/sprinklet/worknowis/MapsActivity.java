@@ -1,31 +1,18 @@
 package com.sprinklet.worknowis;
-import android.content.Context;
 import android.content.Intent;
-import android.support.v4.app.ActivityCompat;
-import android.Manifest;
-import android.content.pm.PackageManager;
 import android.location.LocationManager;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
-import android.location.Location;
 import android.util.Log;
-import android.widget.Toast;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Toast;
-import com.sprinklet.classes.MySQLConnection;
-import com.sprinklet.worknowis.R;
-import com.google.android.gms.maps.CameraUpdateFactory;
+
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.sprinklet.worknowis.R;
-
-import static android.widget.Toast.*;
 
 public class MapsActivity extends FragmentActivity implements GoogleMap.OnMarkerClickListener,OnMapReadyCallback {
 
