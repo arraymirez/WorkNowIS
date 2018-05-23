@@ -33,7 +33,6 @@ public class MapsActivity extends FragmentActivity implements GoogleMap.OnMarker
     Marker seleccionado;
     LocationManager locationManager;
     @Override
-
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
@@ -50,15 +49,13 @@ public class MapsActivity extends FragmentActivity implements GoogleMap.OnMarker
                 if(seleccionado!=null){
 
                     Intent aCita=new Intent(MapsActivity.this,CitasActivity.class);
-                    aCita.putExtra("idEmpleado",seleccionado.getTag().toString());
+                    aCita.putExtra("idEmpleado",seleccionado.getId());
                     startActivity(aCita);
                 }
-
             }
 
 
         });
-
     }
 
     public void onMapReady(GoogleMap googleMap) {
@@ -90,6 +87,8 @@ public class MapsActivity extends FragmentActivity implements GoogleMap.OnMarker
 
             marker.showInfoWindow();
             seleccionado=marker;
+
+            Log.d("Marker:",seleccionado.getId());
         }
 
         return true;
