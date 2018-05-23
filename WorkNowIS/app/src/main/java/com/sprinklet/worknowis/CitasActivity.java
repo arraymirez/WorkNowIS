@@ -24,13 +24,9 @@ public class CitasActivity extends AppCompatActivity {
     }
 
 
-
-
-
-
     public void ObtenerInfo(){
         String id=getIntent().getStringExtra("idEmpleado");
-        EditText inputTitulo= findViewById(R.id.txtNombreActividad);
+        EditText inputTitulo= findViewById(R.id.txtServicio);
         EditText inputCosto= findViewById(R.id.txtCosto);
         inputTitulo.setText("Plomeeria", TextView.BufferType.NORMAL);
         inputCosto.setText("$350", TextView.BufferType.NORMAL);

@@ -26,7 +26,7 @@
             android:text="Servicio" />
 
         <EditText
-            android:id="@+id/editText"
+            android:id="@+id/txtServicio"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
@@ -51,7 +51,7 @@
             android:text="Duracion Servicio" />
 
         <EditText
-            android:id="@+id/editText4"
+            android:id="@+id/txtCosto"
             android:layout_width="121dp"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
