@@ -13,7 +13,7 @@
          location permissions for the 'MyLocation' functionality. 
     -->
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
@@ -25,7 +25,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="com.sprinklet.worknowis.LoginActivity"
+            android:name=".LoginActivity"
             android:label="WorkNow">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -46,18 +46,19 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name="com.sprinklet.worknowis.MapsActivity"
+            android:name=".MapsActivity"
             android:label="@string/title_activity_maps" />
-        <activity android:name="com.sprinklet.worknowis.AddUserActivity" />
+        <activity android:name=".AddUserActivity" />
         <activity
-            android:name="com.sprinklet.worknowis.NavegationActivity"
+            android:name=".NavegationActivity"
             android:label="@string/title_activity_navegation"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name="com.sprinklet.worknowis.AddUserActivity2" />
+        <activity android:name=".AddUserActivity2" />
         <activity
-            android:name="com.sprinklet.worknowis.CitasActivity"
+            android:name=".CitasActivity"
             android:label="@string/title_activity_citas"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".citaCreadaActivity"></activity>
     </application>
 
 </manifest>
