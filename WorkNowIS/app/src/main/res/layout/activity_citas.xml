@@ -13,8 +13,8 @@
         android:layout_width="314dp"
         android:layout_height="466dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="35dp"
-        tools:layout_editor_absoluteY="50dp">
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="29dp">
 
 
         <TextView
@@ -54,33 +54,34 @@
             android:id="@+id/txtCosto"
             android:layout_width="121dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="152dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="153dp"
+            android:layout_toEndOf="@+id/textView2"
             android:ems="10"
             android:inputType="time" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/btnConfirmar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:text="Button" />
+            android:layout_marginBottom="15dp"
+            android:text="Generar cita" />
 
         <EditText
-            android:id="@+id/editText5"
+            android:id="@+id/txtDuracion"
             android:layout_width="92dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="147dp"
-            android:layout_toEndOf="@+id/textView2"
+            android:layout_alignTop="@+id/txtFecha"
+            android:layout_toStartOf="@+id/btnConfirmar"
             android:ems="10"
             android:inputType="numberDecimal" />
 
         <TextView
             android:layout_width="39dp"
             android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/editText5"
+            android:layout_alignBaseline="@+id/txtCosto"
             android:text="$$"
             android:textAlignment="center"
             android:textSize="20dp" />
@@ -89,17 +90,19 @@
             android:id="@+id/textView6"
             android:layout_width="121dp"
             android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/editText6"
+            android:layout_alignParentEnd="true"
             android:layout_alignTop="@+id/textView4"
+            android:layout_marginEnd="19dp"
             android:text="Fecha de Inicio" />
 
         <EditText
-            android:id="@+id/editText6"
+            android:id="@+id/txtFecha"
             android:layout_width="124dp"
             android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
             android:layout_alignParentEnd="true"
-            android:layout_alignTop="@+id/editText4"
-            android:layout_marginEnd="29dp"
+            android:layout_marginBottom="142dp"
+            android:layout_marginEnd="36dp"
             android:ems="10"
             android:inputType="date" />
 

@@ -1,16 +1,15 @@
 package com.sprinklet.worknowis;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.content.Intent;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-
-import com.sprinklet.worknowis.R;
 
 public class CitasActivity extends AppCompatActivity {
 
@@ -21,6 +20,17 @@ public class CitasActivity extends AppCompatActivity {
         setContentView(R.layout.activity_citas);
 
         ObtenerInfo();
+
+        Button confirmacion=findViewById(R.id.btnConfirmar);
+        confirmacion.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v) {
+                Intent conf=new Intent(CitasActivity.this,citaCreadaActivity.class);
+                startActivity(conf);
+            }
+        });
+
     }
 
 
