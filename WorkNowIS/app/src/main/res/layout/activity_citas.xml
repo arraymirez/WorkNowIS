@@ -10,99 +10,105 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
 
     <RelativeLayout
-        android:layout_width="314dp"
-        android:layout_height="466dp"
-        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="29dp">
+        tools:layout_editor_absoluteY="0dp">
 
 
         <TextView
             android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="33dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:text="Servicio" />
+            android:text="Servicio"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"/>
 
         <EditText
             android:id="@+id/txtServicio"
-            android:layout_width="match_parent"
+            android:layout_width="366dp"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="34dp"
             android:ems="10"
             android:inputType="textPersonName" />
 
         <TextView
             android:id="@+id/textView3"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_marginTop="117dp"
-            android:text="Costo" />
+            android:text="Costo"
+            android:layout_marginLeft="10dp"/>
 
         <TextView
             android:id="@+id/textView4"
-            android:layout_width="119dp"
+            android:layout_width="166dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="204dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
             android:text="Duracion Servicio" />
 
         <EditText
             android:id="@+id/txtCosto"
-            android:layout_width="121dp"
+            android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
+
+            android:layout_alignStart="@+id/btnConfirmar"
             android:layout_marginTop="153dp"
-            android:layout_toEndOf="@+id/textView2"
             android:ems="10"
             android:inputType="time" />
 
         <Button
             android:id="@+id/btnConfirmar"
-            android:layout_width="wrap_content"
+            android:layout_width="232dp"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="15dp"
-            android:text="Generar cita" />
+            android:layout_marginBottom="71dp"
+            android:text="Generar cita"
+            />
 
         <EditText
             android:id="@+id/txtDuracion"
-            android:layout_width="92dp"
+            android:layout_width="171dp"
             android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/txtFecha"
-            android:layout_toStartOf="@+id/btnConfirmar"
+            android:layout_below="@+id/textView4"
             android:ems="10"
-            android:inputType="numberDecimal" />
+            android:inputType="numberDecimal"
+            android:layout_marginLeft="5dp"/>
 
         <TextView
-            android:layout_width="39dp"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/txtCosto"
+            android:layout_width="57dp"
+            android:layout_height="46dp"
+            android:layout_alignTop="@+id/txtCosto"
             android:text="$$"
             android:textAlignment="center"
-            android:textSize="20dp" />
+            android:textSize="30dp"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/label$"
+            />
 
         <TextView
             android:id="@+id/textView6"
-            android:layout_width="121dp"
+            android:layout_width="164dp"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignTop="@+id/textView4"
-            android:layout_marginEnd="19dp"
+            android:layout_marginEnd="8dp"
             android:text="Fecha de Inicio" />
 
         <EditText
             android:id="@+id/txtFecha"
-            android:layout_width="124dp"
+            android:layout_width="164dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginBottom="142dp"
-            android:layout_marginEnd="36dp"
+            android:layout_alignStart="@+id/textView6"
+            android:layout_below="@+id/textView4"
             android:ems="10"
             android:inputType="date" />
 

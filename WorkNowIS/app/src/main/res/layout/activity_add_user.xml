@@ -6,73 +6,108 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AddUserActivity">
-    <LinearLayout
-        android:layout_width="322dp"
-        android:layout_height="124dp"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="31dp"
-        tools:layout_editor_absoluteY="16dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="487dp"
+
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="18dp">
+
+        <TextView
+            android:id="@+id/labelDatosP"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="Datos Personales" />
+
         <EditText
             android:id="@+id/txtNom"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:baselineAligned="false"
+            android:layout_width="320dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/labelDatosP"
             android:ems="10"
             android:inputType="textPersonName"
             android:text="Nombre" />
 
-        <TableRow
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
 
-            <EditText
-                android:id="@+id/txtApM"
-                android:layout_width="163dp"
-                android:layout_height="match_parent"
-                android:layout_margin="5dp"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:text="Apellido M" />
+        <EditText
+            android:id="@+id/txtApM"
+            android:layout_width="160dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/txtNom"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Apellido M" />
 
-            <EditText
-                android:id="@+id/txtApP"
-                android:layout_width="160dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:ems="5"
-                android:inputType="textPersonName"
-                android:text="Apellido P" />
+        <EditText
+            android:id="@+id/txtApP"
+            android:layout_width="160dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/txtNom"
+            android:layout_toRightOf="@+id/txtApM"
+            android:ems="5"
+            android:inputType="textPersonName"
+            android:text="Apellido P" />
 
-        </TableRow>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="273dp"
-        android:layout_height="65dp"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="56dp"
-        tools:layout_editor_absoluteY="442dp">
-
-        <Button
-            android:id="@+id/btnSiguiente"
+        <TextView
+            android:id="@+id/labelDir"
             android:layout_width="match_parent"
-            android:layout_height="65dp"
-            android:layout_margin="2dp"
+            android:layout_height="20dp"
 
-            android:text="Siguiente"
-            android:textColor="@color/colorPrimaryDark"
-            tools:layout_editor_absoluteX="118dp"
-            tools:layout_editor_absoluteY="388dp" />
-    </LinearLayout>
+            android:layout_below="@+id/txtApP"
+            android:text="Direccion" />
 
-    <LinearLayout
-        android:layout_width="320dp"
-        android:layout_height="118dp"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="31dp"
-        tools:layout_editor_absoluteY="322dp">
+
+        <EditText
+            android:id="@+id/txtPais"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/labelDir"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Pais" />
+
+
+        <EditText
+            android:id="@+id/txtEstado"
+            android:layout_width="155dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/txtPais"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Estado" />
+
+        <EditText
+            android:id="@+id/txtMunicipio"
+            android:layout_width="166dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/txtPais"
+            android:layout_toEndOf="@+id/txtEstado"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Municipio" />
+
+
+        <EditText
+            android:id="@+id/txtCalle"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="193dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Calle" />
+
+        <EditText
+            android:id="@+id/txtCP"
+            android:layout_width="161dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/txtCalle"
+            android:layout_toEndOf="@+id/txtApM"
+            android:ems="10"
+            android:inputType="textPostalAddress"
+            android:text="CP" />
 
         <EditText
             android:id="@+id/txtTel"
@@ -82,84 +117,34 @@
             android:ems="10"
             android:inputType="phone"
             android:text="(664) 123 4567"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:layout_below="@+id/txtCP"/>
 
         <EditText
             android:id="@+id/txtCorreo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
+            android:layout_below="@+id/txtTel"
+            android:layout_marginTop="-5dp"
             android:ems="10"
             android:inputType="textEmailAddress"
+
             android:text="correo@correo.com"
             android:textAlignment="center"
             tools:layout_editor_absoluteX="85dp"
             tools:layout_editor_absoluteY="185dp" />
-    </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="319dp"
-        android:layout_height="174dp"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="33dp"
-        tools:layout_editor_absoluteY="148dp">
-
-        <EditText
-            android:id="@+id/txtPais"
+        <Button
+            android:id="@+id/btnSiguiente"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Pais" />
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:id="@+id/txtEstado"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:text="Estado" />
-
-            <EditText
-                android:id="@+id/txtMunicipio"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:text="Municipio" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <EditText
-                android:id="@+id/txtCalle"
-                android:layout_width="205dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:text="Calle" />
-
-            <EditText
-                android:id="@+id/txtCP"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:ems="10"
-                android:inputType="textPostalAddress"
-                android:text="CP" />
-
-        </TableRow>
-
-    </LinearLayout>
+            android:layout_height="65dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="21dp"
+            android:text="Siguiente"
+            android:textColor="@color/colorPrimaryDark"
+            tools:layout_editor_absoluteX="118dp"
+            tools:layout_editor_absoluteY="388dp" />
+    </RelativeLayout>
 
 
 </android.support.constraint.ConstraintLayout>
